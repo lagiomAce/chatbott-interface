@@ -1,0 +1,25 @@
+<div class="card text-center cardContainer" *ngIf="usuario" >
+    <div class="card-header">
+        CHATBOT
+    </div>
+    <div class="card-body">
+        <div id="contenedorDeMensajes" class="contenedorDeMensajes h-100">
+            <p *ngFor="let mensaje of mensajes" class="msj p-2"
+            [ngClass]="(usuario==mensaje.emisor)? 'enviado' : 'recibido'"
+            >
+                {{mensaje.texto}}
+            </p>
+
+        </div>
+     
+    </div>
+    <form  class="card-footer text-muted input-group estatico" (ngSubmit)="enviarMensaje()" >
+            <input type="text" class="form-control" placeholder="ingrese su mensaje" [(ngModel)]="nuevoMensaje"
+            [ngModelOptions]="{standalone: true}">
+            <div class="input-group-append" (click)="enviarMensaje()">
+              <span class="input-group-text" id="basic-addon2">
+                  <img class="imgEnviar" src="https://cdn-icons-png.flaticon.com/512/786/786407.png" width="25px" alt="send message">
+              </span>
+            </div>          
+    </form>
+  </div>

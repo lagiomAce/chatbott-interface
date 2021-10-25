@@ -1,0 +1,51 @@
+.cardContainer{
+   width: 300px;
+   height: 500px;
+   position:fixed;
+   right: 0.5rem;
+   bottom: 0.5rem;
+}
+.card-header{
+    background-color:#7f0bc2 ;
+    color: white;
+    font-weight: 700;
+}
+ /* .card-body{
+    padding: 0.5rem;
+    background-image: url('https://www.llevalootechnologies.com/wp-content/uploads/2020/07/LOGO-LLEVALOO-TECHNOLOGIES-02.png') ;
+    background-size: 300px 100px;
+    opacity: 0.2;
+    
+}  */
+.imgEnviar:active{
+
+    transform: scale(0.8);
+
+}
+.enviado{
+    display: block;
+    float: right;
+    background-color: rgb(127, 11, 194,0.7);
+    color: white;
+    min-width: 50.01%;
+    border-radius:10px;
+    text-align: left;
+
+}
+.recibido{
+    display: block;
+    float: left;
+    background-color: rgba(72, 64, 77, 0.7);
+    color: white;
+    min-width: 50.01%;
+    border-radius:10px;
+    text-align: left;
+
+}
+.contenedorDeMensajes{
+    overflow:scroll ;
+    padding:0.3rem;
+}
+.contenedorDeMensajes::-webkit-scrollbar{
+    display: none;
+}
